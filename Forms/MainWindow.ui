@@ -277,6 +277,7 @@ QMenu::item::selected {
      <string>Tools</string>
     </property>
     <addaction name="actionResearcher"/>
+    <addaction name="actionTimer"/>
    </widget>
    <widget class="QMenu" name="menuGen3Tools">
     <property name="title">
@@ -408,6 +409,11 @@ QMenu::item::selected {
    </property>
    <property name="text">
     <string>Chinese</string>
+   </property>
+  </action>
+  <action name="actionTimer">
+   <property name="text">
+    <string>Timer</string>
    </property>
   </action>
  </widget>

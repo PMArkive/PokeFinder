@@ -42,6 +42,7 @@
 #include <Forms/Gen4/Wild4.hpp>
 #include <Forms/Util/IVtoPID.hpp>
 #include <Forms/Util/Researcher.hpp>
+#include <Forms/Util/Timer.hpp>
 
 namespace Ui
 {
@@ -96,6 +97,7 @@ private slots:
     void on_actionIVtoPID4_triggered();
     void on_actionResearcher_triggered();
 
+    void on_actionTimer_triggered();
 };
 
 #endif // MAINWINDOW_HPP

@@ -310,3 +310,10 @@ void MainWindow::on_actionResearcher_triggered()
     r->show();
     r->raise();
 }
+
+void MainWindow::on_actionTimer_triggered()
+{
+    auto *timer = new Timer();
+    timer->show();
+    timer->raise();
+}
