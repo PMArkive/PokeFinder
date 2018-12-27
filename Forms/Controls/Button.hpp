@@ -17,29 +17,31 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QApplication>
-#include <QSettings>
-#include <QTranslator>
-#include <Forms/MainWindow.hpp>
+#ifndef BUTTON_HPP
+#define BUTTON_HPP
 
-int main(int argc, char *argv[])
+#include <QPainter>
+#include <QPaintEvent>
+#include <QPushButton>
+#include <QSvgRenderer>
+
+class Button : public QPushButton
 {
-    QApplication a(argc, argv);
-    a.setApplicationName("PokeFinder");
-    a.setOrganizationName("PokeFinder Team");
 
-    QSettings setting;
-    QString lang = setting.value("language", "en").toString();
+public:
+    Button(QWidget *parent = nullptr);
+    ~Button() override = default;
 
-    QTranslator translator;
-    if (translator.load(QString(":/translations/PokeFinder_%1.qm").arg(lang)))
-    {
-        a.installTranslator(&translator);
-    }
+    void setImage(const QString &path);
 
-    MainWindow w;
-    w.show();
-    w.raise();
+protected:
+    void paintEvent(QPaintEvent *event) override;
 
-    return a.exec();
-}
+private:
+    QSvgRenderer svg;
+
+    QImage toGrayScale(QImage image);
+
+};
+
+#endif // BUTTON_HPP

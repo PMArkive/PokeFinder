@@ -29,14 +29,12 @@ MainWindow::MainWindow(QWidget *parent) :
     setWindowFlags(Qt::Widget | Qt::MSWindowsFixedSizeDialogHint);
 
     checkProfileJson();
-    setupLanguage();
     QTimer::singleShot(1000, this, &MainWindow::checkUpdates);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete langGroup;
     delete stationary3;
     delete wild3;
     delete egg3;
@@ -45,39 +43,6 @@ MainWindow::~MainWindow()
     delete wild4;
     delete egg4;
     delete ids4;
-}
-
-void MainWindow::setupLanguage()
-{
-    langGroup = new QActionGroup(ui->menuLanguage);
-    langGroup->setExclusive(true);
-    connect(langGroup, &QActionGroup::triggered, this, &MainWindow::slotLanguageChanged);
-
-    QSettings setting;
-    QString currLang = setting.value("locale", "en").toString();
-
-    QStringList locales = { "de", "en", "es", "fr", "it", "ja", "ko", "zh_Hans_CN" };
-    for (int i = 0; i < locales.size(); i++)
-    {
-        QString lang = locales[i];
-
-        auto *action = ui->menuLanguage->actions()[i];
-        action->setData(lang);
-
-        if (currLang == lang)
-        {
-            action->setChecked(true);
-        }
-
-        langGroup->addAction(action);
-    }
-
-    QApplication::removeTranslator(&translator);
-    if (translator.load(QString(":/translations/PokeFinder_%1.qm").arg(currLang)))
-    {
-        QApplication::installTranslator(&translator);
-    }
-    ui->retranslateUi(this);
 }
 
 void MainWindow::checkProfileJson()
@@ -119,27 +84,6 @@ void MainWindow::checkUpdates()
     }
 
     setting.setValue("lastOpened", today);
-}
-
-void MainWindow::slotLanguageChanged(QAction *action)
-{
-    if (action)
-    {
-        QString lang = action->data().toString();
-
-        QSettings setting;
-        if (setting.value("locale", "en") != lang)
-        {
-            setting.setValue("locale", lang);
-
-            QMessageBox message(QMessageBox::Question, tr("Language update"), tr("Restart for changes to take effect. Restart now?"), QMessageBox::Yes | QMessageBox::No);
-            if (message.exec() == QMessageBox::Yes)
-            {
-                QProcess::startDetached(QApplication::applicationFilePath());
-                QApplication::quit();
-            }
-        }
-    }
 }
 
 void MainWindow::updateProfiles(int num)
@@ -309,4 +253,11 @@ void MainWindow::on_actionResearcher_triggered()
     auto *r = new Researcher();
     r->show();
     r->raise();
+}
+
+void MainWindow::on_actionSettings_triggered()
+{
+    auto *settings = new Settings();
+    settings->show();
+    settings->raise();
 }

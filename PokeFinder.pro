@@ -1,7 +1,7 @@
 lessThan(QT_MAJOR_VERSION, 5):error("You need at least Qt 5.11 to build PokeFinder")
 equals(QT_MAJOR_VERSION, 5):lessThan(QT_MINOR_VERSION, 11):error("You need at least Qt 5.11 to build PokeFinder")
 
-QT += network widgets
+QT += network svg widgets
 CONFIG += c++1z
 
 TARGET = PokeFinder
@@ -53,7 +53,8 @@ FORMS += \
     Forms/Gen4/Wild4.ui \
     Forms/Util/IVtoPID.ui \
     Forms/Util/Researcher.ui \
-    Forms/MainWindow.ui
+    Forms/MainWindow.ui \
+    Forms/Util/Settings.ui
 
 HEADERS += \
     Core/Gen3/Egg3.hpp \
@@ -142,7 +143,9 @@ HEADERS += \
     Models/ResearcherModel.hpp \
     Util/DateTime.hpp \
     Util/ResearcherFrame.hpp \
-    Util/TableUtility.hpp
+    Util/TableUtility.hpp \
+    Forms/Controls/Button.hpp \
+    Forms/Util/Settings.hpp
 
 SOURCES += \
     Core/Gen3/Egg3.cpp \
@@ -225,4 +228,6 @@ SOURCES += \
     Util/DateTime.cpp \
     Util/ResearcherFrame.cpp \
     main.cpp \
-    Util/TableUtility.cpp
+    Util/TableUtility.cpp \
+    Forms/Controls/Button.cpp \
+    Forms/Util/Settings.cpp

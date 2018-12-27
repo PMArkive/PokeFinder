@@ -42,6 +42,7 @@
 #include <Forms/Gen4/Wild4.hpp>
 #include <Forms/Util/IVtoPID.hpp>
 #include <Forms/Util/Researcher.hpp>
+#include <Forms/Util/Settings.hpp>
 
 namespace Ui
 {
@@ -58,8 +59,6 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QTranslator translator;
-    QActionGroup *langGroup;
     const QString VERSION = "v2.2.1";
 
     Stationary3 *stationary3 = nullptr;
@@ -71,12 +70,10 @@ private:
     Eggs4 *egg4 = nullptr;
     IDs4 *ids4 = nullptr;
 
-    void setupLanguage();
     void checkProfileJson();
     void checkUpdates();
 
 private slots:
-    void slotLanguageChanged(QAction *action);
     void updateProfiles(int num);
     void on_pushButtonStationary3_clicked();
     void on_pushButtonWild3_clicked();
@@ -95,6 +92,7 @@ private slots:
     void on_actionSeedtoTime4_triggered();
     void on_actionIVtoPID4_triggered();
     void on_actionResearcher_triggered();
+    void on_actionSettings_triggered();
 
 };
 

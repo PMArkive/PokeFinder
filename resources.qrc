@@ -21,6 +21,18 @@
         <file alias="latias.png">Images/latias.png</file>
         <file alias="latios.png">Images/latios.png</file>
     </qresource>
+    <qresource prefix="/svg">
+        <file alias="background.svg">Images/background.svg</file>
+        <file alias="chinese.svg">Images/chinese.svg</file>
+        <file alias="english.svg">Images/english.svg</file>
+        <file alias="french.svg">Images/french.svg</file>
+        <file alias="german.svg">Images/german.svg</file>
+        <file alias="italian.svg">Images/italian.svg</file>
+        <file alias="japanese.svg">Images/japanese.svg</file>
+        <file alias="korean.svg">Images/korean.svg</file>
+        <file alias="language.svg">Images/language.svg</file>
+        <file alias="spanish.svg">Images/spanish.svg</file>
+    </qresource>
     <qresource prefix="/text">
         <file alias="species_de.txt">Core/Text/species_de.txt</file>
         <file alias="species_en.txt">Core/Text/species_en.txt</file>

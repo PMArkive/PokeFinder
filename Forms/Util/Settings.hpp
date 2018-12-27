@@ -17,29 +17,46 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QApplication>
+#ifndef SETTINGS_HPP
+#define SETTINGS_HPP
+
+#include <QMainWindow>
+#include <QMessageBox>
+#include <QPainter>
+#include <QProcess>
 #include <QSettings>
-#include <QTranslator>
-#include <Forms/MainWindow.hpp>
+#include <QSvgRenderer>
 
-int main(int argc, char *argv[])
+namespace Ui
 {
-    QApplication a(argc, argv);
-    a.setApplicationName("PokeFinder");
-    a.setOrganizationName("PokeFinder Team");
-
-    QSettings setting;
-    QString lang = setting.value("language", "en").toString();
-
-    QTranslator translator;
-    if (translator.load(QString(":/translations/PokeFinder_%1.qm").arg(lang)))
-    {
-        a.installTranslator(&translator);
-    }
-
-    MainWindow w;
-    w.show();
-    w.raise();
-
-    return a.exec();
+    class Settings;
 }
+
+class Settings : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    explicit Settings(QWidget *parent = nullptr);
+    ~Settings() override;
+
+private:
+    Ui::Settings *ui;
+    QSvgRenderer svg;
+
+    void paintEvent(QPaintEvent *event) override;
+    void changeLanguage(const QString &lang);
+
+private slots:
+    void on_pushButtonChinese_clicked();
+    void on_pushButtonEnglish_clicked();
+    void on_pushButtonFrench_clicked();
+    void on_pushButtonGerman_clicked();
+    void on_pushButtonItalian_clicked();
+    void on_pushButtonJapanese_clicked();
+    void on_pushButtonKorean_clicked();
+    void on_pushButtonSpanish_clicked();
+
+};
+
+#endif // SETTINGS_HPP
