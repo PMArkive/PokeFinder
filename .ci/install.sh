@@ -8,8 +8,6 @@ case $OS in
   } ;;
   macOS)
   {
-    brew update
-    brew install qt5
-    brew link --force qt5
+    PATH="$HOME/Qt/5.15:$PATH"
   } ;;
 esac
