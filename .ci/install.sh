@@ -8,6 +8,6 @@ case $OS in
   } ;;
   macOS)
   {
-    PATH="$HOME/Qt/5.15:$PATH"
+    echo 'export PATH="/$HOME/Qt/5.15/clang_64/bin:$PATH"' >> /Users/appveyor/.bash_profile
   } ;;
 esac
