@@ -7,6 +7,6 @@ case $OS in
   } ;;  
   macOS)
   {
-	cmake -G"Unix Makefiles" -DCMAKE_BUILD_TYPE=RELEASE ../
+	cmake -G"Unix Makefiles" -DCMAKE_BUILD_TYPE=RELEASE ../ -DCMAKE_PREFIX_PATH=/home/appveyor/Qt/5.15/clang_64
   } ;;
 esac
