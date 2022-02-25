@@ -20,6 +20,7 @@
 #ifndef PROFILELOADER_HPP
 #define PROFILELOADER_HPP
 
+#include <filesystem>
 #include <string>
 #include <vector>
 
@@ -30,7 +31,7 @@ class Profile8;
 
 namespace ProfileLoader
 {
-    bool init(const std::string &location);
+    std::filesystem::file_type init(const std::string &location);
 }
 
 namespace ProfileLoader3

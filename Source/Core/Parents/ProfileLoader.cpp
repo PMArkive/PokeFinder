@@ -22,7 +22,6 @@
 #include <Core/Gen4/Profile4.hpp>
 #include <Core/Gen5/Profile5.hpp>
 #include <Core/Gen8/Profile8.hpp>
-#include <filesystem>
 #include <fstream>
 #include <nlohmann/json.hpp>
 #include <sstream>
@@ -56,19 +55,22 @@ namespace
 
 namespace ProfileLoader
 {
-    bool init(const std::string &location)
+    std::filesystem::file_type init(const std::string &location)
     {
         path = location;
 
-        bool exists = std::filesystem::exists(path);
-        if (!exists)
+        std::filesystem::path file(path);
+        auto status = std::filesystem::status(file);
+        auto type = status.type();
+
+        if (type == std::filesystem::file_type::none || type == std::filesystem::file_type::not_found)
         {
             std::ofstream json(path);
             json << "{}";
             json.close();
         }
 
-        return exists;
+        return type;
     }
 }
 

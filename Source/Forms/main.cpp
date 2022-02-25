@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
     validateSettings(setting);
 
     QString profilePath = setting.value("settings/profiles").toString();
-    bool profile = ProfileLoader::init(profilePath.toStdString());
+    auto profile = ProfileLoader::init(profilePath.toStdString());
 
     QString style = setting.value("settings/style").toString();
     if (style == "dark")

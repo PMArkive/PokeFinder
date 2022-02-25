@@ -21,6 +21,7 @@
 #define MAINWINDOW_HPP
 
 #include <QMainWindow>
+#include <filesystem>
 
 class Static3;
 class Wild3;
@@ -54,7 +55,7 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 public:
-    explicit MainWindow(bool profile, QWidget *parent = nullptr);
+    explicit MainWindow(std::filesystem::file_type profile, QWidget *parent = nullptr);
     ~MainWindow() override;
 
 private:

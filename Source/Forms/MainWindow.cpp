@@ -72,7 +72,7 @@
 #include <QtNetwork>
 #include <version.h>
 
-MainWindow::MainWindow(bool profile, QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
+MainWindow::MainWindow(std::filesystem::file_type profile, QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     setWindowTitle(QString("Pok\303\251Finder %1").arg(POKEFINDER_VERSION));
@@ -80,12 +80,8 @@ MainWindow::MainWindow(bool profile, QWidget *parent) : QMainWindow(parent), ui(
     setupModels();
 
     QTimer::singleShot(1000, [this, profile] {
-        if (!profile)
-        {
-            QMessageBox message(QMessageBox::Warning, tr("Unable to locate profiles"),
-                                tr("Please update path to your profiles file to restore existing profiles."));
-            message.exec();
-        }
+        QMessageBox message(QMessageBox::Info, tr("Profile value"), QString::number(static_cast<int>(profile)));
+        message.exec();
 
         checkUpdates();
     });
