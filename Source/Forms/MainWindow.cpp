@@ -80,7 +80,7 @@ MainWindow::MainWindow(std::filesystem::file_type profile, QWidget *parent) : QM
     setupModels();
 
     QTimer::singleShot(1000, [this, profile] {
-        QMessageBox message(QMessageBox::Info, tr("Profile value"), QString::number(static_cast<int>(profile)));
+        QMessageBox message(QMessageBox::Information, tr("Profile value"), QString::number(static_cast<int>(profile)));
         message.exec();
 
         checkUpdates();
