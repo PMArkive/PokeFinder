@@ -1,17 +1,17 @@
 environment:
   matrix:
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2022
-    QTPATH: C:\Qt\6.2\msvc2019_64
+    QTPATH: C:\Qt\5.15\msvc2019_64
     OpenSSL: C:\OpenSSL-v111-Win64\bin
     OS: win
     EXT: zip
     VCVARSALLPATH: C:\"Program Files\Microsoft Visual Studio"\2022\Community\VC\Auxiliary\Build\vcvars64.bat
-  - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu2004
-    QTVER: 6.1
+  - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
+    QTVER: 5.15
     OS: linux
     EXT: tar.gz
   - APPVEYOR_BUILD_WORKER_IMAGE: macos
-    QTVER: 6.1
+    QTVER: 5.15
     OS: macOS
     EXT: tar.gz
 

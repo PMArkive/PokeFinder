@@ -33,7 +33,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-find_package(Qt6 COMPONENTS Core LinguistTools Network Widgets REQUIRED)
+find_package(Qt5 5.15 COMPONENTS Core LinguistTools Network Widgets REQUIRED)
 
 set(PROJECT_TS
     i18n/PokeFinder_fr.ts
@@ -240,4 +240,4 @@ else ()
     )
 endif ()
 
-target_link_libraries(PokeFinder PRIVATE PokeFinderCore Qt6::Core Qt6::Network Qt6::Widgets)
+target_link_libraries(PokeFinder PRIVATE PokeFinderCore Qt::Core Qt::Network Qt::Widgets)
