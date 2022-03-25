@@ -22,6 +22,7 @@
 
 #include <Core/Util/Global.hpp>
 #include <QWidget>
+#include <array>
 
 enum class Controls : u16;
 
@@ -30,12 +31,12 @@ namespace Ui
     class Filter;
 }
 
-class Filter  : public QWidget
+class Filter : public QWidget
 {
     Q_OBJECT
 public:
     explicit Filter(QWidget *parent = nullptr);
-    ~Filter() override ;
+    ~Filter() override;
 
     std::array<u8, 6> getMinIVs() const;
     std::array<u8, 6> getMaxIVs() const;

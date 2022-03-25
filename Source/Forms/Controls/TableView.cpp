@@ -23,6 +23,7 @@
 #include <QFileDialog>
 #include <QHeaderView>
 #include <QKeyEvent>
+#include <QTextStream>
 #include <QTimer>
 
 TableView::TableView(QWidget *parent) : QTableView(parent)
