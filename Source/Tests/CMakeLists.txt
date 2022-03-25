@@ -1,6 +1,6 @@
 project(Tests LANGUAGES CXX)
 
-find_package(Qt6 COMPONENTS Core Test REQUIRED)
+find_package(Qt5 5.15 COMPONENTS Core Test REQUIRED)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -24,5 +24,5 @@ add_executable(Tests
 
 add_test(NAME Tests COMMAND Tests)
 
-target_link_libraries(Tests PRIVATE PokeFinderCore Qt6::Core Qt6::Test)
+target_link_libraries(Tests PRIVATE PokeFinderCore Qt::Core Qt::Test)
 
