@@ -25,6 +25,7 @@
 #include <QFile>
 #include <QSettings>
 #include <QStandardPaths>
+#include <QTextStream>
 #include <QThread>
 #include <QTranslator>
 
