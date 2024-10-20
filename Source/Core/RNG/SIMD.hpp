@@ -32,6 +32,7 @@ using vuint32x4 = __m128i;
 using vuint32x4 = uint32x4_t;
 #else
 #include <array>
+#include <bit>
 using vuint32x4 = std::array<u32, 4>;
 #endif
 
@@ -473,6 +474,22 @@ union alignas(16) vuint128 {
         return ret;
     }
 };
+
+inline vuint128 v32x4_byteswap(vuint128 x)
+{
+    vuint128 ret;
+#if defined(SIMD_X86)
+    ret.uint128 = _mm_shuffle_epi8(x.uint128, _mm_setr_epi8(3, 2, 1, 0, 7, 6, 5, 4, 11, 10, 9, 8, 15, 14, 13, 12));
+#elif defined(SIMD_ARM)
+    ret.uint128 = vrev64q_u32(x.uint128);
+#else
+    for (int i = 0; i < 4; i++)
+    {
+        ret.uint32[i] = std::byteswap(x.uint32[i]);
+    }
+#endif
+    return ret;
+}
 
 /**
  * @brief Loads vector from memory
