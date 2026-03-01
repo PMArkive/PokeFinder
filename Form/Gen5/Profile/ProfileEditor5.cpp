@@ -39,7 +39,6 @@ ProfileEditor5::ProfileEditor5(QWidget *parent) : QDialog(parent), ui(new Ui::Pr
     ui->textBoxSID->setValues(InputType::TIDSID);
     ui->textBoxMAC->setValues(0, 0xFFFFFFFFFFFF, 12, 16);
     ui->textBoxVCount->setValues(0, 0xFF, 2, 16);
-    ui->textBoxGxStat->setValues(0, 99, 2, 16);
     ui->textBoxVFrame->setValues(0, 99, 2, 16);
     ui->textBoxTimer0Min->setValues(InputType::Seed16Bit);
     ui->textBoxTimer0Max->setValues(InputType::Seed16Bit);
@@ -72,7 +71,6 @@ ProfileEditor5::ProfileEditor5(const Profile5 &profile, QWidget *parent) : Profi
     ui->lineEditSHACache->setText(QString::fromStdString(profile.getSHACache()));
     ui->textBoxMAC->setText(QString::number(profile.getMac(), 16));
     ui->textBoxVCount->setText(QString::number(profile.getVCount(), 16));
-    ui->textBoxGxStat->setText(QString::number(profile.getGxStat(), 16));
     ui->textBoxVFrame->setText(QString::number(profile.getVFrame(), 16));
     ui->textBoxTimer0Min->setText(QString::number(profile.getTimer0Min(), 16));
     ui->textBoxTimer0Max->setText(QString::number(profile.getTimer0Max(), 16));
@@ -84,7 +82,6 @@ ProfileEditor5::ProfileEditor5(const Profile5 &profile, QWidget *parent) : Profi
     ui->comboBoxKeypresses->setChecks(profile.getKeypresses());
 
     ui->checkBoxSkipLR->setChecked(profile.getSkipLR());
-    ui->checkBoxSoftReset->setChecked(profile.getSoftReset());
     ui->checkBoxMemoryLink->setChecked(profile.getMemoryLink());
     ui->checkBoxShinyCharm->setChecked(profile.getShinyCharm());
 }
@@ -100,7 +97,6 @@ ProfileEditor5::ProfileEditor5(Game version, Language language, DSType dsType, u
     ui->textBoxVCount->setText(QString::number(calibration.getVCount(), 16));
     ui->textBoxTimer0Min->setText(QString::number(calibration.getTimer0(), 16));
     ui->textBoxTimer0Max->setText(QString::number(calibration.getTimer0(), 16));
-    ui->textBoxGxStat->setText(QString::number(calibration.getGxStat(), 16));
     ui->textBoxVFrame->setText(QString::number(calibration.getVFrame(), 16));
 }
 
@@ -114,10 +110,9 @@ Profile5 ProfileEditor5::getProfile()
     return Profile5(ui->lineEditProfile->text().toStdString(), ui->comboBoxVersion->getEnum<Game>(), ui->textBoxTID->getUShort(),
                     ui->textBoxSID->getUShort(), ui->lineEditIVCache->text().toStdString(), ui->lineEditSHACache->text().toStdString(),
                     ui->textBoxMAC->getULong(), ui->comboBoxKeypresses->getCheckedArray<9>(), ui->textBoxVCount->getUChar(),
-                    ui->textBoxGxStat->getUChar(), ui->textBoxVFrame->getUChar(), ui->checkBoxSkipLR->isChecked(),
-                    ui->textBoxTimer0Min->getUShort(), ui->textBoxTimer0Max->getUShort(), ui->checkBoxSoftReset->isChecked(),
-                    ui->checkBoxMemoryLink->isChecked(), ui->checkBoxShinyCharm->isChecked(), ui->comboBoxDSType->getEnum<DSType>(),
-                    ui->comboBoxLanguage->getEnum<Language>());
+                    ui->textBoxVFrame->getUChar(), ui->checkBoxSkipLR->isChecked(), ui->textBoxTimer0Min->getUShort(),
+                    ui->textBoxTimer0Max->getUShort(), ui->checkBoxMemoryLink->isChecked(), ui->checkBoxShinyCharm->isChecked(),
+                    ui->comboBoxDSType->getEnum<DSType>(), ui->comboBoxLanguage->getEnum<Language>());
 }
 
 void ProfileEditor5::clearIVCache()
@@ -179,7 +174,8 @@ void ProfileEditor5::selectSHACache()
     }
     else
     {
-        QMessageBox msg(QMessageBox::Warning, tr("Invalid SHA Cache"), tr("Provided file is not a valid SHA Cache or was not created from the profile"));
+        QMessageBox msg(QMessageBox::Warning, tr("Invalid SHA Cache"),
+                        tr("Provided file is not a valid SHA Cache or was not created from the profile"));
         msg.exec();
         return;
     }

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>779</width>
+    <width>792</width>
     <height>481</height>
    </rect>
   </property>
@@ -281,264 +281,252 @@
      <property name="title">
       <string>Variables</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout_3">
-      <item row="0" column="1">
-       <widget class="QLabel" name="labelMin">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>Min</string>
-        </property>
-       </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="1">
+         <widget class="QLabel" name="labelMin">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Min</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="labelMax">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Max</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="labelSeconds">
+          <property name="text">
+           <string>Seconds</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QSpinBox" name="spinBoxMinSeconds">
+          <property name="maximum">
+           <number>59</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QSpinBox" name="spinBoxMaxSeconds">
+          <property name="maximum">
+           <number>59</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="labelVCount">
+          <property name="text">
+           <string>VCount</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="TextBox" name="textBoxMinVCount"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="TextBox" name="textBoxMaxVCount"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="labelTimer0">
+          <property name="text">
+           <string>Timer0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="TextBox" name="textBoxMinTimer0"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="TextBox" name="textBoxMaxTimer0"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="labelVFrame">
+          <property name="text">
+           <string>VFrame</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="TextBox" name="textBoxMinVFrame"/>
+        </item>
+        <item row="4" column="2">
+         <widget class="TextBox" name="textBoxMaxVFrame"/>
+        </item>
+        <item row="5" column="2">
+         <widget class="QCheckBox" name="checkBoxMemoryLink">
+          <property name="text">
+           <string>Memory Link</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
-      <item row="0" column="2">
-       <widget class="QLabel" name="labelMax">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>Max</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="labelSeconds">
-        <property name="text">
-         <string>Seconds</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QSpinBox" name="spinBoxMinSeconds">
-        <property name="maximum">
-         <number>59</number>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QSpinBox" name="spinBoxMaxSeconds">
-        <property name="maximum">
-         <number>59</number>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="labelVCount">
-        <property name="text">
-         <string>VCount</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="TextBox" name="textBoxMinVCount"/>
-      </item>
-      <item row="2" column="2">
-       <widget class="TextBox" name="textBoxMaxVCount"/>
-      </item>
-      <item row="3" column="0">
-       <widget class="QLabel" name="labelTimer0">
-        <property name="text">
-         <string>Timer0</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
-       <widget class="TextBox" name="textBoxMinTimer0"/>
-      </item>
-      <item row="3" column="2">
-       <widget class="TextBox" name="textBoxMaxTimer0"/>
-      </item>
-      <item row="4" column="0">
-       <widget class="QLabel" name="labelGxStat">
-        <property name="text">
-         <string>GxStat</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="1">
-       <widget class="TextBox" name="textBoxMinGxStat"/>
-      </item>
-      <item row="4" column="2">
-       <widget class="TextBox" name="textBoxMaxGxStat"/>
-      </item>
-      <item row="5" column="0">
-       <widget class="QLabel" name="labelVFrame">
-        <property name="text">
-         <string>VFrame</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="1">
-       <widget class="TextBox" name="textBoxMinVFrame"/>
-      </item>
-      <item row="5" column="2">
-       <widget class="TextBox" name="textBoxMaxVFrame"/>
-      </item>
-      <item row="6" column="1">
-       <widget class="QCheckBox" name="checkBoxSoftReset">
-        <property name="text">
-         <string>Soft Reset</string>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="2">
-       <widget class="QCheckBox" name="checkBoxMemoryLink">
-        <property name="text">
-         <string>Memory Link</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="3" rowspan="7">
+      <item>
        <widget class="Line" name="line">
         <property name="orientation">
          <enum>Qt::Orientation::Vertical</enum>
         </property>
        </widget>
       </item>
-      <item row="1" column="4">
-       <widget class="QLabel" name="labelVersion">
-        <property name="text">
-         <string>Version</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="5">
-       <widget class="ComboBox" name="comboBoxVersion">
-        <item>
-         <property name="text">
-          <string>Black</string>
-         </property>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelVersion">
+          <property name="text">
+           <string>Version</string>
+          </property>
+         </widget>
         </item>
-        <item>
-         <property name="text">
-          <string>White</string>
-         </property>
+        <item row="0" column="1">
+         <widget class="ComboBox" name="comboBoxVersion">
+          <item>
+           <property name="text">
+            <string>Black</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>White</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Black 2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>White 2</string>
+           </property>
+          </item>
+         </widget>
         </item>
-        <item>
-         <property name="text">
-          <string>Black 2</string>
-         </property>
+        <item row="1" column="0">
+         <widget class="QLabel" name="labelLanguage">
+          <property name="text">
+           <string>Language</string>
+          </property>
+         </widget>
         </item>
-        <item>
-         <property name="text">
-          <string>White 2</string>
-         </property>
+        <item row="1" column="1">
+         <widget class="ComboBox" name="comboBoxLanguage">
+          <item>
+           <property name="text">
+            <string>ENG</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>SPA</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>FRE</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ITA</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>DEU</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>JPN</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>KOR</string>
+           </property>
+          </item>
+         </widget>
         </item>
-       </widget>
-      </item>
-      <item row="2" column="4">
-       <widget class="QLabel" name="labelLanguage">
-        <property name="text">
-         <string>Language</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="5">
-       <widget class="ComboBox" name="comboBoxLanguage">
-        <item>
-         <property name="text">
-          <string>ENG</string>
-         </property>
+        <item row="2" column="0">
+         <widget class="QLabel" name="labelDSType">
+          <property name="text">
+           <string>DS Type</string>
+          </property>
+         </widget>
         </item>
-        <item>
-         <property name="text">
-          <string>SPA</string>
-         </property>
+        <item row="2" column="1">
+         <widget class="ComboBox" name="comboBoxDSType">
+          <item>
+           <property name="text">
+            <string>DS Original/Lite</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>DSi/DSi XL</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>3DS</string>
+           </property>
+          </item>
+         </widget>
         </item>
-        <item>
-         <property name="text">
-          <string>FRE</string>
-         </property>
+        <item row="3" column="0">
+         <widget class="QLabel" name="labelMACAddress">
+          <property name="text">
+           <string>MAC Address</string>
+          </property>
+         </widget>
         </item>
-        <item>
-         <property name="text">
-          <string>ITA</string>
-         </property>
+        <item row="3" column="1">
+         <widget class="TextBox" name="textBoxMACAddress"/>
         </item>
-        <item>
-         <property name="text">
-          <string>DEU</string>
-         </property>
+        <item row="4" column="0">
+         <widget class="QLabel" name="labelKeypresses">
+          <property name="text">
+           <string>Keypresses</string>
+          </property>
+         </widget>
         </item>
-        <item>
-         <property name="text">
-          <string>JPN</string>
-         </property>
+        <item row="4" column="1">
+         <widget class="QScrollArea" name="scrollAreaKeypresses">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>106</width>
+             <height>157</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayoutKeypresses"/>
+          </widget>
+         </widget>
         </item>
-        <item>
-         <property name="text">
-          <string>KOR</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="3" column="4">
-       <widget class="QLabel" name="labelDSType">
-        <property name="text">
-         <string>DS Type</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="5">
-       <widget class="ComboBox" name="comboBoxDSType">
-        <item>
-         <property name="text">
-          <string>DS Original/Lite</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>DSi/DSi XL</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>3DS</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="4" column="4">
-       <widget class="QLabel" name="labelMACAddress">
-        <property name="text">
-         <string>MAC Address</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="5">
-       <widget class="TextBox" name="textBoxMACAddress"/>
-      </item>
-      <item row="5" column="4">
-       <widget class="QLabel" name="labelKeypresses">
-        <property name="text">
-         <string>Keypresses</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="5" rowspan="2">
-       <widget class="QScrollArea" name="scrollAreaKeypresses">
-        <property name="widgetResizable">
-         <bool>true</bool>
-        </property>
-        <widget class="QWidget" name="scrollAreaWidgetContents">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>97</width>
-           <height>77</height>
-          </rect>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayoutKeypresses"/>
-        </widget>
-       </widget>
+       </layout>
       </item>
      </layout>
     </widget>
@@ -605,11 +593,8 @@
   <tabstop>textBoxMaxVCount</tabstop>
   <tabstop>textBoxMinTimer0</tabstop>
   <tabstop>textBoxMaxTimer0</tabstop>
-  <tabstop>textBoxMinGxStat</tabstop>
-  <tabstop>textBoxMaxGxStat</tabstop>
   <tabstop>textBoxMinVFrame</tabstop>
   <tabstop>textBoxMaxVFrame</tabstop>
-  <tabstop>checkBoxSoftReset</tabstop>
   <tabstop>checkBoxMemoryLink</tabstop>
   <tabstop>comboBoxVersion</tabstop>
   <tabstop>comboBoxLanguage</tabstop>

@@ -35,22 +35,11 @@ public:
      * @param timer0 Calibrated Timer0
      * @param vcount Calibrated VCount
      * @param vframe Calibrated VFrame
-     * @param gxstat Calibrated GxStat
      * @param second Calibrated second
      */
-    ProfileSearcherState5(u64 seed, u16 timer0, u8 vcount, u8 vframe, u8 gxstat, u8 second) :
-        seed(seed), timer0(timer0), gxstat(gxstat), second(second), vcount(vcount), vframe(vframe)
+    ProfileSearcherState5(u64 seed, u16 timer0, u8 vcount, u8 vframe,  u8 second) :
+        seed(seed), timer0(timer0),  second(second), vcount(vcount), vframe(vframe)
     {
-    }
-
-    /**
-     * @brief Returns the calibrated GxStat
-     *
-     * @return GxStat
-     */
-    u8 getGxStat() const
-    {
-        return gxstat;
     }
 
     /**
@@ -106,7 +95,6 @@ public:
 private:
     u64 seed;
     u16 timer0;
-    u8 gxstat;
     u8 second;
     u8 vcount;
     u8 vframe;

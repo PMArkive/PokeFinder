@@ -25,7 +25,7 @@ ProfileSearcherModel5::ProfileSearcherModel5(QObject *parent) : TableModel(paren
 
 int ProfileSearcherModel5::columnCount(const QModelIndex &parent) const
 {
-    return 6;
+    return 5;
 }
 
 QVariant ProfileSearcherModel5::data(const QModelIndex &index, int role) const
@@ -44,8 +44,6 @@ QVariant ProfileSearcherModel5::data(const QModelIndex &index, int role) const
         case 3:
             return QString::number(state.getTimer0(), 16);
         case 4:
-            return QString::number(state.getGxStat(), 16);
-        case 5:
             return QString::number(state.getVFrame(), 16);
         }
     }

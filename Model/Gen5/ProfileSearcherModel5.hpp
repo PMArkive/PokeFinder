@@ -68,7 +68,7 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
 
 private:
-    QStringList header = { tr("Seed"), tr("Seconds"), tr("VCount"), tr("Timer0"), tr("GxStat"), tr("VFrame") };
+    QStringList header = { tr("Seed"), tr("Seconds"), tr("VCount"), tr("Timer0"), tr("VFrame") };
 };
 
 #endif // PROFILESEARCHERMODEL5_HPP

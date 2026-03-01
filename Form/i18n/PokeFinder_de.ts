@@ -145,10 +145,6 @@
         <translation>DS Typ</translation>
     </message>
     <message>
-        <source>GxStat</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Keypresses</source>
         <translation>Anzahl Knopfdrücke</translation>
     </message>
@@ -1528,10 +1524,6 @@
         <translation></translation>
     </message>
     <message>
-        <source>GxStat</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Keypresses</source>
         <translation>Anzahl Knopfdrücke</translation>
     </message>
@@ -2052,10 +2044,6 @@
         <translation></translation>
     </message>
     <message>
-        <source>GxStat</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Keypresses</source>
         <translation>Anzahl Knopfdrücke</translation>
     </message>
@@ -2213,35 +2201,35 @@
     </message>
     <message>
         <location filename="../Gen5/Event5.cpp" line="217"/>
-        <location filename="../Gen5/Event5.cpp" line="367"/>
+        <location filename="../Gen5/Event5.cpp" line="366"/>
         <source>Invalid format</source>
         <translation>Ungültiges Format</translation>
     </message>
     <message>
         <location filename="../Gen5/Event5.cpp" line="217"/>
-        <location filename="../Gen5/Event5.cpp" line="367"/>
+        <location filename="../Gen5/Event5.cpp" line="366"/>
         <source>Wondercard is not the correct size</source>
         <translation>Wunderkarte hat nicht die korrekte Größe</translation>
     </message>
     <message>
         <location filename="../Gen5/Event5.cpp" line="267"/>
-        <location filename="../Gen5/Event5.cpp" line="417"/>
+        <location filename="../Gen5/Event5.cpp" line="416"/>
         <source>File error</source>
         <translation>Dateifehler</translation>
     </message>
     <message>
         <location filename="../Gen5/Event5.cpp" line="267"/>
-        <location filename="../Gen5/Event5.cpp" line="417"/>
+        <location filename="../Gen5/Event5.cpp" line="416"/>
         <source>There was a problem opening the wondercard</source>
         <translation>Es gab ein Problem beim öffnen der Wunderkarte</translation>
     </message>
     <message>
-        <location filename="../Gen5/Event5.cpp" line="307"/>
+        <location filename="../Gen5/Event5.cpp" line="306"/>
         <source>Invalid date range</source>
         <translation>Ungültige Datumsspanne</translation>
     </message>
     <message>
-        <location filename="../Gen5/Event5.cpp" line="307"/>
+        <location filename="../Gen5/Event5.cpp" line="306"/>
         <source>Start date is after end date</source>
         <translation>Startdatum ist nach Enddatum</translation>
     </message>
@@ -3492,10 +3480,6 @@
         <translation>DS Typ</translation>
     </message>
     <message>
-        <source>GxStat</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Keypresses</source>
         <translation>Anzahl Knopfdrücke</translation>
     </message>
@@ -4246,10 +4230,6 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
     </message>
     <message>
         <source>Timer0</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>GxStat</source>
         <translation></translation>
     </message>
     <message>
@@ -5247,10 +5227,6 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
         <translation>DS Typ</translation>
     </message>
     <message>
-        <source>GxStat</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>VFrame</source>
         <translation></translation>
     </message>
@@ -5272,10 +5248,6 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
     </message>
     <message>
         <source>Min</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Soft Reset</source>
         <translation></translation>
     </message>
     <message>
@@ -5411,27 +5383,27 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
         <translation>Seed</translation>
     </message>
     <message>
-        <location filename="../Gen5/Profile/ProfileCalibrator5.cpp" line="75"/>
+        <location filename="../Gen5/Profile/ProfileCalibrator5.cpp" line="73"/>
         <source>Create profile</source>
         <translation>Profil erstellen</translation>
     </message>
     <message>
-        <location filename="../Gen5/Profile/ProfileCalibrator5.cpp" line="170"/>
+        <location filename="../Gen5/Profile/ProfileCalibrator5.cpp" line="166"/>
         <source>No row selected</source>
         <translation>Keine Zeile ausgewählt</translation>
     </message>
     <message>
-        <location filename="../Gen5/Profile/ProfileCalibrator5.cpp" line="170"/>
+        <location filename="../Gen5/Profile/ProfileCalibrator5.cpp" line="166"/>
         <source>Please select a row</source>
         <translation>Bitte eine Zeile auswählen</translation>
     </message>
     <message>
-        <location filename="../Gen5/Profile/ProfileCalibrator5.cpp" line="242"/>
+        <location filename="../Gen5/Profile/ProfileCalibrator5.cpp" line="235"/>
         <source>Some min values are greater then max values</source>
         <translation>Manche Min Werte sind größer als die Max Werte</translation>
     </message>
     <message>
-        <location filename="../Gen5/Profile/ProfileCalibrator5.cpp" line="242"/>
+        <location filename="../Gen5/Profile/ProfileCalibrator5.cpp" line="235"/>
         <source>Invalid Input</source>
         <translation>Ungültige Eingabe</translation>
     </message>
@@ -5721,16 +5693,8 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
         <translation></translation>
     </message>
     <message>
-        <source>GxStat</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Find Parameters</source>
         <translation>Parameter finden</translation>
-    </message>
-    <message>
-        <source>Soft Reset</source>
-        <translation></translation>
     </message>
     <message>
         <source>Skip L/R</source>
@@ -5745,42 +5709,42 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
         <translation>Schillerpin</translation>
     </message>
     <message>
-        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="147"/>
+        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="142"/>
         <source>Enter a profile name</source>
         <translation>Profilname eingeben</translation>
     </message>
     <message>
-        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="147"/>
+        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="142"/>
         <source>Missing name</source>
         <translation>Fehlender Name</translation>
     </message>
     <message>
-        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="157"/>
+        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="152"/>
         <source>Open IV Cache</source>
         <translation>IV Cache öffnen</translation>
     </message>
     <message>
-        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="166"/>
+        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="161"/>
         <source>Invalid IV Cache</source>
         <translation>Ungültiges IV Cache</translation>
     </message>
     <message>
-        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="166"/>
+        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="161"/>
         <source>Provided file is not a valid IV Cache</source>
         <translation>Datei ist kein gültiges IV Cache</translation>
     </message>
     <message>
-        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="174"/>
+        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="169"/>
         <source>Open SHA1 Cache</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="182"/>
+        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="177"/>
         <source>Invalid SHA Cache</source>
         <translation>Ungültiges SHA Cache</translation>
     </message>
     <message>
-        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="182"/>
+        <location filename="../Gen5/Profile/ProfileEditor5.cpp" line="178"/>
         <source>Provided file is not a valid SHA Cache or was not created from the profile</source>
         <translation>Datei ist kein gültiges SHA Cache oder wurde nicht aus dem Profil erstellt</translation>
     </message>
@@ -6129,48 +6093,46 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
 <context>
     <name>ProfileModel5</name>
     <message>
+        <location filename="../../Model/Gen5/ProfileModel5.cpp" line="62"/>
         <location filename="../../Model/Gen5/ProfileModel5.cpp" line="64"/>
         <location filename="../../Model/Gen5/ProfileModel5.cpp" line="66"/>
-        <location filename="../../Model/Gen5/ProfileModel5.cpp" line="68"/>
-        <location filename="../../Model/Gen5/ProfileModel5.cpp" line="70"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
     <message>
+        <location filename="../../Model/Gen5/ProfileModel5.cpp" line="62"/>
         <location filename="../../Model/Gen5/ProfileModel5.cpp" line="64"/>
         <location filename="../../Model/Gen5/ProfileModel5.cpp" line="66"/>
-        <location filename="../../Model/Gen5/ProfileModel5.cpp" line="68"/>
-        <location filename="../../Model/Gen5/ProfileModel5.cpp" line="70"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="71"/>
+        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="72"/>
         <source>Profile Name</source>
         <translation>Profilname</translation>
     </message>
     <message>
-        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="71"/>
+        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="72"/>
         <source>Version</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="71"/>
+        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="72"/>
         <source>Language</source>
         <translation>Sprache</translation>
     </message>
     <message>
-        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="71"/>
+        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="72"/>
         <source>TID</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="71"/>
+        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="72"/>
         <source>SID</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="71"/>
+        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="72"/>
         <source>MAC Address</source>
         <translation>MAC Adresse</translation>
     </message>
@@ -6180,27 +6142,22 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
         <translation>DS Typ</translation>
     </message>
     <message>
-        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="72"/>
+        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="73"/>
         <source>VCount</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="72"/>
+        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="73"/>
         <source>Timer0</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="72"/>
-        <source>GxStat</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="72"/>
+        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="73"/>
         <source>VFrame</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="72"/>
+        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="73"/>
         <source>Keypresses</source>
         <translation>Knopfdrücke</translation>
     </message>
@@ -6208,11 +6165,6 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
         <location filename="../../Model/Gen5/ProfileModel5.hpp" line="73"/>
         <source>Skip L/R</source>
         <translation>L/R weglassen</translation>
-    </message>
-    <message>
-        <location filename="../../Model/Gen5/ProfileModel5.hpp" line="73"/>
-        <source>Soft Reset</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="../../Model/Gen5/ProfileModel5.hpp" line="73"/>
@@ -6290,11 +6242,6 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
     <message>
         <location filename="../../Model/Gen5/ProfileSearcherModel5.hpp" line="71"/>
         <source>Timer0</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../Model/Gen5/ProfileSearcherModel5.hpp" line="71"/>
-        <source>GxStat</source>
         <translation></translation>
     </message>
     <message>
@@ -6862,10 +6809,6 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
         <translation></translation>
     </message>
     <message>
-        <source>GxStat</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>VFrame</source>
         <translation></translation>
     </message>
@@ -6898,37 +6841,37 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="126"/>
+        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="125"/>
         <source>Missing output file</source>
         <translation>Output Datei fehlt</translation>
     </message>
     <message>
-        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="126"/>
+        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="125"/>
         <source>Please select a file to save the results to</source>
         <translation>Bitte Datei zum speichern der Ergebnisse auswählen</translation>
     </message>
     <message>
-        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="135"/>
+        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="134"/>
         <source>Invalid date range</source>
         <translation>Ungültige Datumsspanne</translation>
     </message>
     <message>
-        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="135"/>
+        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="134"/>
         <source>Start date is after end date</source>
         <translation>Startdatum ist nach Enddatum</translation>
     </message>
     <message>
-        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="143"/>
+        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="142"/>
         <source>Invalid IV Cache</source>
         <translation>Ungültiges IV Cache</translation>
     </message>
     <message>
-        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="143"/>
+        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="142"/>
         <source>Profile does not have a valid IV Cache</source>
         <translation>Profil hat kein gültiges IV Cache</translation>
     </message>
     <message>
-        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="182"/>
+        <location filename="../Gen5/Tools/SHA1CacheFinder.cpp" line="181"/>
         <source>Save File</source>
         <translation>Datei speichern</translation>
     </message>
@@ -7695,10 +7638,6 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
         <translation></translation>
     </message>
     <message>
-        <source>GxStat</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>VFrame</source>
         <translation></translation>
     </message>
@@ -7877,44 +7816,44 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
         <translation>Synchro</translation>
     </message>
     <message>
-        <location filename="../Gen5/Static5.cpp" line="358"/>
+        <location filename="../Gen5/Static5.cpp" line="357"/>
         <source>Invalid date range</source>
         <translation>Ungültige Datumsspanne</translation>
     </message>
     <message>
-        <location filename="../Gen5/Static5.cpp" line="358"/>
+        <location filename="../Gen5/Static5.cpp" line="357"/>
         <source>Start date is after end date</source>
         <translation>Startdatum ist nach Enddatum</translation>
     </message>
     <message>
-        <location filename="../Gen5/Static5.cpp" line="466"/>
+        <location filename="../Gen5/Static5.cpp" line="465"/>
         <source>Settings are configured for fast IV/SHA searching</source>
         <translation>Einstellungen sind für schnelle IV/SHA Suche konfiguriert</translation>
     </message>
     <message>
-        <location filename="../Gen5/Static5.cpp" line="471"/>
+        <location filename="../Gen5/Static5.cpp" line="470"/>
         <source>Settings are configured for fast IV searching.
 Profile is missing or has an incompatible SHA cache.</source>
         <translation>Einstellungen sind für schnelle IV Suche konfiguriert.
 Profil hat kein oder ein inkompatibles SHA Cache.</translation>
     </message>
     <message>
-        <location filename="../Gen5/Static5.cpp" line="478"/>
+        <location filename="../Gen5/Static5.cpp" line="477"/>
         <source>Profile does not have a IV cache file configured</source>
         <translation>Profil hat keine IV cache Datei Konfiguriert</translation>
     </message>
     <message>
-        <location filename="../Gen5/Static5.cpp" line="483"/>
+        <location filename="../Gen5/Static5.cpp" line="482"/>
         <source>Settings are not configured for fast searching</source>
         <translation>Schnellsuche ist aufgrund der IV Advances oder IV Filter deaktiviert</translation>
     </message>
     <message>
-        <location filename="../Gen5/Static5.cpp" line="484"/>
+        <location filename="../Gen5/Static5.cpp" line="483"/>
         <source>Keep initial/max advances below %1/%2</source>
         <translation>Lasse Minimale/Maximale IV Advances unter %1/%2</translation>
     </message>
     <message>
-        <location filename="../Gen5/Static5.cpp" line="485"/>
+        <location filename="../Gen5/Static5.cpp" line="484"/>
         <source>Ensure IV filters are set to common spreads</source>
         <translation>Setze IV Filter auf häufig verwendete IV spreads</translation>
     </message>
@@ -9816,10 +9755,6 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
         <translation></translation>
     </message>
     <message>
-        <source>GxStat</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>VFrame</source>
         <translation></translation>
     </message>
@@ -10050,44 +9985,44 @@ Profil hat kein oder ein inkompatibles SHA Cache.</translation>
         <translation>Synchro</translation>
     </message>
     <message>
-        <location filename="../Gen5/Wild5.cpp" line="374"/>
+        <location filename="../Gen5/Wild5.cpp" line="373"/>
         <source>Invalid date range</source>
         <translation>Ungültige Datumsspanne</translation>
     </message>
     <message>
-        <location filename="../Gen5/Wild5.cpp" line="374"/>
+        <location filename="../Gen5/Wild5.cpp" line="373"/>
         <source>Start date is after end date</source>
         <translation>Startdatum ist nach Enddatum</translation>
     </message>
     <message>
-        <location filename="../Gen5/Wild5.cpp" line="472"/>
+        <location filename="../Gen5/Wild5.cpp" line="471"/>
         <source>Settings are configured for fast IV/SHA searching</source>
         <translation>Einstellungen sind für schnelle IV/SHA Suche konfiguriert</translation>
     </message>
     <message>
-        <location filename="../Gen5/Wild5.cpp" line="477"/>
+        <location filename="../Gen5/Wild5.cpp" line="476"/>
         <source>Settings are configured for fast IV searching.
 Profile is missing or has an incompatible SHA cache.</source>
         <translation>Einstellungen sind für schnelle IV Suche konfiguriert.
 Profil hat kein oder ein inkompatibles SHA Cache.</translation>
     </message>
     <message>
-        <location filename="../Gen5/Wild5.cpp" line="484"/>
+        <location filename="../Gen5/Wild5.cpp" line="483"/>
         <source>Profile does not have a IV cache file configured</source>
         <translation>Profil hat keine IV cache Datei Konfiguriert</translation>
     </message>
     <message>
-        <location filename="../Gen5/Wild5.cpp" line="489"/>
+        <location filename="../Gen5/Wild5.cpp" line="488"/>
         <source>Settings are not configured for fast searching</source>
         <translation>Schnellsuche ist aufgrund der IV Advances oder IV Filter deaktiviert</translation>
     </message>
     <message>
-        <location filename="../Gen5/Wild5.cpp" line="490"/>
+        <location filename="../Gen5/Wild5.cpp" line="489"/>
         <source>Keep initial/max advances below %1/%2</source>
         <translation>Lasse Minimale/Maximale IV Advances unter %1/%2</translation>
     </message>
     <message>
-        <location filename="../Gen5/Wild5.cpp" line="491"/>
+        <location filename="../Gen5/Wild5.cpp" line="490"/>
         <source>Ensure IV filters are set to common spreads</source>
         <translation>Setze IV Filter auf häufig verwendete IV spreads</translation>
     </message>

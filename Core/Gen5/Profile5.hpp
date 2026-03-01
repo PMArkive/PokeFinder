@@ -44,20 +44,18 @@ public:
      * @param mac MAC address
      * @param keypresses Array of keypress values
      * @param vcount VCount value
-     * @param gxstat GxStat value
      * @param vframe VFrame value
      * @param skipLR Whether LR buttons should be skipped
      * @param timer0Min Minimum Timer0 value
      * @param timer0Max Maximum Timer0 value
-     * @param softReset Whether soft resetting is utilized
      * @param memoryLink Whether memory link is activated
      * @param shinyCharm Whether shiny charm is obtained
      * @param dsType DS type for the profile
      * @param language Language type of the profile
      */
     Profile5(const std::string &name, Game version, u16 tid, u16 sid, const std::string &ivCache, const std::string &shaCache, u64 mac,
-             const std::array<bool, 9> &keypresses, u8 vcount, u8 gxstat, u8 vframe, bool skipLR, u16 timer0Min, u16 timer0Max,
-             bool softReset, bool memoryLink, bool shinyCharm, DSType dsType, Language language) :
+             const std::array<bool, 9> &keypresses, u8 vcount, u8 vframe, bool skipLR, u16 timer0Min, u16 timer0Max, 
+             bool memoryLink, bool shinyCharm, DSType dsType, Language language) :
         Profile(name, version, tid, sid),
         ivCache(ivCache),
         shaCache(shaCache),
@@ -67,11 +65,9 @@ public:
         memoryLink(memoryLink),
         shinyCharm(shinyCharm),
         skipLR(skipLR),
-        softReset(softReset),
         dsType(dsType),
         language(language),
         keypresses(keypresses),
-        gxstat(gxstat),
         vcount(vcount),
         vframe(vframe)
     {
@@ -93,16 +89,6 @@ public:
      * @return DS type string
      */
     std::string getDSTypeString() const;
-
-    /**
-     * @brief Returns the GxStat value of the profile
-     *
-     * @return GxStat value
-     */
-    u8 getGxStat() const
-    {
-        return gxstat;
-    }
 
     /**
      * @brief Returns the profile IV cache path
@@ -202,17 +188,6 @@ public:
     }
 
     /**
-     * @brief Returns if soft resetting is used
-     *
-     * @return true Soft resetting is used
-     * @return false Soft resetting is not used
-     */
-    bool getSoftReset() const
-    {
-        return softReset;
-    }
-
-    /**
      * @brief Returns the maximum Timer0 value
      *
      * @return Maximum Timer0 value
@@ -281,11 +256,9 @@ private:
     bool memoryLink;
     bool shinyCharm;
     bool skipLR;
-    bool softReset;
     DSType dsType;
     Language language;
     std::array<bool, 9> keypresses;
-    u8 gxstat;
     u8 vcount;
     u8 vframe;
 };

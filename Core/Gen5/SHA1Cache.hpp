@@ -163,11 +163,9 @@ private:
     u32 maxAdvances;
     u16 timer0max;
     u16 timer0min;
-    bool softReset;
     DSType type;
     Language language;
     bool valid;
-    u8 gxstat;
     u8 vcount;
     u8 vframe;
 };

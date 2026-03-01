@@ -38,11 +38,8 @@ void ProfileSearcher5Test::ivs_data()
     QTest::addColumn<u8>("maxVCount");
     QTest::addColumn<u16>("minTimer0");
     QTest::addColumn<u16>("maxTimer0");
-    QTest::addColumn<u8>("minGxStat");
-    QTest::addColumn<u8>("maxGxStat");
     QTest::addColumn<u8>("minVFrame");
     QTest::addColumn<u8>("maxVFrame");
-    QTest::addColumn<bool>("softReset");
     QTest::addColumn<Game>("version");
     QTest::addColumn<Language>("language");
     QTest::addColumn<DSType>("dsType");
@@ -58,10 +55,9 @@ void ProfileSearcher5Test::ivs_data()
         QTest::newRow(d["name"].get<std::string>().data())
             << Date(d["date"].get<int>()) << Time(d["time"].get<int>()) << d["minSeconds"].get<u8>() << d["maxSeconds"].get<u8>()
             << d["minVCount"].get<u8>() << d["maxVCount"].get<u8>() << d["minTimer0"].get<u16>() << d["maxTimer0"].get<u16>()
-            << d["minGxStat"].get<u8>() << d["maxGxStat"].get<u8>() << d["minVFrame"].get<u8>() << d["maxVFrame"].get<u8>()
-            << d["softReset"].get<bool>() << d["version"].get<Game>() << d["language"].get<Language>() << d["dsType"].get<DSType>()
-            << d["mac"].get<u64>() << d["buttons"].get<Buttons>() << d["minIVs"].get<IVs>() << d["maxIVs"].get<IVs>()
-            << d["result"].get<u64>();
+            << d["minVFrame"].get<u8>() << d["maxVFrame"].get<u8>() << d["version"].get<Game>() << d["language"].get<Language>()
+            << d["dsType"].get<DSType>() << d["mac"].get<u64>() << d["buttons"].get<Buttons>() << d["minIVs"].get<IVs>()
+            << d["maxIVs"].get<IVs>() << d["result"].get<u64>();
     }
 }
 
@@ -75,11 +71,8 @@ void ProfileSearcher5Test::ivs()
     QFETCH(u8, maxVCount);
     QFETCH(u16, minTimer0);
     QFETCH(u16, maxTimer0);
-    QFETCH(u8, minGxStat);
-    QFETCH(u8, maxGxStat);
     QFETCH(u8, minVFrame);
     QFETCH(u8, maxVFrame);
-    QFETCH(bool, softReset);
     QFETCH(Game, version);
     QFETCH(Language, language);
     QFETCH(DSType, dsType);
@@ -89,8 +82,8 @@ void ProfileSearcher5Test::ivs()
     QFETCH(IVs, maxIVs);
     QFETCH(u64, result);
 
-    ProfileIVSearcher5 searcher(date, time, minSeconds, maxSeconds, minVCount, maxVCount, minTimer0, maxTimer0, minGxStat, maxGxStat,
-                                softReset, version, language, dsType, mac, buttons, minIVs, maxIVs);
+    ProfileIVSearcher5 searcher(date, time, minSeconds, maxSeconds, minVCount, maxVCount, minTimer0, maxTimer0, version, language, dsType,
+                                mac, buttons, minIVs, maxIVs);
     searcher.startSearch(1, minVFrame, maxVFrame);
 
     auto results = searcher.getResults();
@@ -109,11 +102,8 @@ void ProfileSearcher5Test::needle_data()
     QTest::addColumn<u8>("maxVCount");
     QTest::addColumn<u16>("minTimer0");
     QTest::addColumn<u16>("maxTimer0");
-    QTest::addColumn<u8>("minGxStat");
-    QTest::addColumn<u8>("maxGxStat");
     QTest::addColumn<u8>("minVFrame");
     QTest::addColumn<u8>("maxVFrame");
-    QTest::addColumn<bool>("softReset");
     QTest::addColumn<Game>("version");
     QTest::addColumn<Language>("language");
     QTest::addColumn<DSType>("dsType");
@@ -130,10 +120,9 @@ void ProfileSearcher5Test::needle_data()
         QTest::newRow(d["name"].get<std::string>().data())
             << Date(d["date"].get<int>()) << Time(d["time"].get<int>()) << d["minSeconds"].get<u8>() << d["maxSeconds"].get<u8>()
             << d["minVCount"].get<u8>() << d["maxVCount"].get<u8>() << d["minTimer0"].get<u16>() << d["maxTimer0"].get<u16>()
-            << d["minGxStat"].get<u8>() << d["maxGxStat"].get<u8>() << d["minVFrame"].get<u8>() << d["maxVFrame"].get<u8>()
-            << d["softReset"].get<bool>() << d["version"].get<Game>() << d["language"].get<Language>() << d["dsType"].get<DSType>()
-            << d["mac"].get<u64>() << d["buttons"].get<Buttons>() << d["needles"].get<std::vector<u8>>() << d["unovaLink"].get<bool>()
-            << d["memoryLink"].get<bool>() << d["result"].get<u64>();
+            << d["minVFrame"].get<u8>() << d["maxVFrame"].get<u8>() << d["version"].get<Game>() << d["language"].get<Language>()
+            << d["dsType"].get<DSType>() << d["mac"].get<u64>() << d["buttons"].get<Buttons>() << d["needles"].get<std::vector<u8>>()
+            << d["unovaLink"].get<bool>() << d["memoryLink"].get<bool>() << d["result"].get<u64>();
     }
 }
 
@@ -147,11 +136,8 @@ void ProfileSearcher5Test::needle()
     QFETCH(u8, maxVCount);
     QFETCH(u16, minTimer0);
     QFETCH(u16, maxTimer0);
-    QFETCH(u8, minGxStat);
-    QFETCH(u8, maxGxStat);
     QFETCH(u8, minVFrame);
     QFETCH(u8, maxVFrame);
-    QFETCH(bool, softReset);
     QFETCH(Game, version);
     QFETCH(Language, language);
     QFETCH(DSType, dsType);
@@ -162,8 +148,8 @@ void ProfileSearcher5Test::needle()
     QFETCH(bool, memoryLink);
     QFETCH(u64, result);
 
-    ProfileNeedleSearcher5 searcher(date, time, minSeconds, maxSeconds, minVCount, maxVCount, minTimer0, maxTimer0, minGxStat, maxGxStat,
-                                    softReset, version, language, dsType, mac, buttons, needles, unovaLink, memoryLink);
+    ProfileNeedleSearcher5 searcher(date, time, minSeconds, maxSeconds, minVCount, maxVCount, minTimer0, maxTimer0, version, language,
+                                    dsType, mac, buttons, needles, unovaLink, memoryLink);
     searcher.startSearch(1, minVFrame, maxVFrame);
 
     auto results = searcher.getResults();
@@ -182,11 +168,8 @@ void ProfileSearcher5Test::seed_data()
     QTest::addColumn<u8>("maxVCount");
     QTest::addColumn<u16>("minTimer0");
     QTest::addColumn<u16>("maxTimer0");
-    QTest::addColumn<u8>("minGxStat");
-    QTest::addColumn<u8>("maxGxStat");
     QTest::addColumn<u8>("minVFrame");
     QTest::addColumn<u8>("maxVFrame");
-    QTest::addColumn<bool>("softReset");
     QTest::addColumn<Game>("version");
     QTest::addColumn<Language>("language");
     QTest::addColumn<DSType>("dsType");
@@ -200,9 +183,8 @@ void ProfileSearcher5Test::seed_data()
         QTest::newRow(d["name"].get<std::string>().data())
             << Date(d["date"].get<int>()) << Time(d["time"].get<int>()) << d["minSeconds"].get<u8>() << d["maxSeconds"].get<u8>()
             << d["minVCount"].get<u8>() << d["maxVCount"].get<u8>() << d["minTimer0"].get<u16>() << d["maxTimer0"].get<u16>()
-            << d["minGxStat"].get<u8>() << d["maxGxStat"].get<u8>() << d["minVFrame"].get<u8>() << d["maxVFrame"].get<u8>()
-            << d["softReset"].get<bool>() << d["version"].get<Game>() << d["language"].get<Language>() << d["dsType"].get<DSType>()
-            << d["mac"].get<u64>() << d["buttons"].get<Buttons>() << d["seed"].get<u64>();
+            << d["minVFrame"].get<u8>() << d["maxVFrame"].get<u8>() << d["version"].get<Game>() << d["language"].get<Language>()
+            << d["dsType"].get<DSType>() << d["mac"].get<u64>() << d["buttons"].get<Buttons>() << d["seed"].get<u64>();
     }
 }
 
@@ -216,11 +198,8 @@ void ProfileSearcher5Test::seed()
     QFETCH(u8, maxVCount);
     QFETCH(u16, minTimer0);
     QFETCH(u16, maxTimer0);
-    QFETCH(u8, minGxStat);
-    QFETCH(u8, maxGxStat);
     QFETCH(u8, minVFrame);
     QFETCH(u8, maxVFrame);
-    QFETCH(bool, softReset);
     QFETCH(Game, version);
     QFETCH(Language, language);
     QFETCH(DSType, dsType);
@@ -228,8 +207,8 @@ void ProfileSearcher5Test::seed()
     QFETCH(Buttons, buttons);
     QFETCH(u64, seed);
 
-    ProfileSeedSearcher5 searcher(date, time, minSeconds, maxSeconds, minVCount, maxVCount, minTimer0, maxTimer0, minGxStat, maxGxStat,
-                                  softReset, version, language, dsType, mac, buttons, seed);
+    ProfileSeedSearcher5 searcher(date, time, minSeconds, maxSeconds, minVCount, maxVCount, minTimer0, maxTimer0, version, language, dsType,
+                                  mac, buttons, seed);
     searcher.startSearch(1, minVFrame, maxVFrame);
 
     auto results = searcher.getResults();

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>505</width>
+    <width>496</width>
     <height>290</height>
    </rect>
   </property>
@@ -118,26 +118,6 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="11">
-       <widget class="QLabel" name="labelProfileGxStat">
-        <property name="text">
-         <string>GxStat</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="12">
-       <widget class="QLabel" name="labelProfileGxStatValue"/>
-      </item>
-      <item row="1" column="11">
-       <widget class="QLabel" name="labelProfileVFrame">
-        <property name="text">
-         <string>VFrame</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="12">
-       <widget class="QLabel" name="labelProfileVFrameValue"/>
-      </item>
       <item row="0" column="13" rowspan="2">
        <widget class="Line" name="line">
         <property name="orientation">
@@ -145,24 +125,34 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="14">
+      <item row="0" column="11">
+       <widget class="QLabel" name="labelProfileVFrame">
+        <property name="text">
+         <string>VFrame</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="12">
+       <widget class="QLabel" name="labelProfileVFrameValue"/>
+      </item>
+      <item row="1" column="11">
        <widget class="QLabel" name="labelProfileKeypresses">
         <property name="text">
          <string>Keypresses</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="15">
+      <item row="1" column="12">
        <widget class="QLabel" name="labelProfileKeypressesValue"/>
       </item>
-      <item row="1" column="14">
+      <item row="0" column="14">
        <widget class="QLabel" name="labelProfileGame">
         <property name="text">
          <string>Game</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="15">
+      <item row="0" column="15">
        <widget class="QLabel" name="labelProfileGameValue"/>
       </item>
      </layout>

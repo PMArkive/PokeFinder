@@ -60,7 +60,7 @@
       <item row="0" column="4" rowspan="2">
        <widget class="Line" name="line_3">
         <property name="orientation">
-         <enum>Qt::Vertical</enum>
+         <enum>Qt::Orientation::Vertical</enum>
         </property>
        </widget>
       </item>
@@ -87,55 +87,45 @@
       <item row="0" column="7" rowspan="2">
        <widget class="Line" name="line_2">
         <property name="orientation">
-         <enum>Qt::Vertical</enum>
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="10" rowspan="2">
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
         </property>
        </widget>
       </item>
       <item row="0" column="8">
-       <widget class="QLabel" name="labelProfileGxStat">
-        <property name="text">
-         <string>GxStat</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="9">
-       <widget class="QLabel" name="labelProfileGxStatValue"/>
-      </item>
-      <item row="1" column="8">
        <widget class="QLabel" name="labelProfileVFrame">
         <property name="text">
          <string>VFrame</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="9">
+      <item row="0" column="9">
        <widget class="QLabel" name="labelProfileVFrameValue"/>
       </item>
-      <item row="0" column="10" rowspan="2">
-       <widget class="Line" name="line">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="11">
+      <item row="1" column="8">
        <widget class="QLabel" name="labelProfileKeypresses">
         <property name="text">
          <string>Keypresses</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="12">
+      <item row="1" column="9">
        <widget class="QLabel" name="labelProfileKeypressesValue"/>
       </item>
-      <item row="1" column="11">
+      <item row="0" column="11">
        <widget class="QLabel" name="labelProfileGame">
         <property name="text">
          <string>Game</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="12">
+      <item row="0" column="12">
        <widget class="QLabel" name="labelProfileGameValue"/>
       </item>
      </layout>

@@ -50,11 +50,9 @@ public:
      * @param language Language parameter
      * @param type DS type parameter
      * @param mac MAC address parameter
-     * @param softReset Soft reset parameter
      * @param vFrame VFrame parameter
-     * @param gxStat GxStat parameter
      */
-    SHA1(Game version, Language language, DSType type, u64 mac, bool softReset, u8 vFrame, u8 gxStat);
+    SHA1(Game version, Language language, DSType type, u64 mac, u8 vFrame);
 
     /**
      * @brief Hashes input parameters from the precomputed \p alpha
@@ -135,11 +133,9 @@ public:
      * @param language Language parameter
      * @param type DS type parameter
      * @param mac MAC address parameter
-     * @param softReset Soft reset parameter
      * @param vFrame VFrame parameter
-     * @param gxStat GxStat parameter
      */
-    SHA1SSE(Game version, Language language, DSType type, u64 mac, bool softReset, u8 vFrame, u8 gxStat);
+    SHA1SSE(Game version, Language language, DSType type, u64 mac, u8 vFrame);
 
     /**
      * @brief Hashes input parameters from the precomputed \p alpha
@@ -221,11 +217,9 @@ public:
      * @param language Language parameter
      * @param type DS type parameter
      * @param mac MAC address parameter
-     * @param softReset Soft reset parameter
      * @param vFrame VFrame parameter
-     * @param gxStat GxStat parameter
      */
-    SHA1AVX2(Game version, Language language, DSType type, u64 mac, bool softReset, u8 vFrame, u8 gxStat);
+    SHA1AVX2(Game version, Language language, DSType type, u64 mac, u8 vFrame);
 
     /**
      * @brief Hashes input parameters from the precomputed \p alpha

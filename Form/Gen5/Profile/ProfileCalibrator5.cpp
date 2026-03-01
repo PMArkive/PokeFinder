@@ -53,8 +53,6 @@ ProfileCalibrator5::ProfileCalibrator5(QWidget *parent) : QWidget(parent), ui(ne
     ui->textBoxMaxVCount->setValues(0, 0xFF, 2, 16);
     ui->textBoxMinTimer0->setValues(InputType::Seed16Bit);
     ui->textBoxMaxTimer0->setValues(InputType::Seed16Bit);
-    ui->textBoxMinGxStat->setValues(0, 99, 2, 16);
-    ui->textBoxMaxGxStat->setValues(0, 99, 2, 16);
     ui->textBoxMinVFrame->setValues(0, 99, 2, 16);
     ui->textBoxMaxVFrame->setValues(0, 99, 2, 16);
     ui->textBoxMACAddress->setValues(0, 0xFFFFFFFFFFFF, 12, 16);
@@ -146,8 +144,6 @@ void ProfileCalibrator5::updateParameters()
         break;
     }
 
-    ui->textBoxMinGxStat->setText("6");
-    ui->textBoxMaxGxStat->setText("6");
     ui->textBoxMinVFrame->setText("0");
     ui->textBoxMaxVFrame->setText("10");
 }
@@ -217,11 +213,8 @@ void ProfileCalibrator5::search()
     u8 maxVCount = ui->textBoxMaxVCount->getUChar();
     u16 minTimer0 = ui->textBoxMinTimer0->getUShort();
     u16 maxTimer0 = ui->textBoxMaxTimer0->getUShort();
-    u8 minGxStat = ui->textBoxMinGxStat->getUChar();
-    u8 maxGxStat = ui->textBoxMaxGxStat->getUChar();
     u8 minVFrame = ui->textBoxMinVFrame->getUChar();
     u8 maxVFrame = ui->textBoxMaxVFrame->getUChar();
-    bool softReset = ui->checkBoxSoftReset->isChecked();
     auto version = static_cast<Game>(ui->comboBoxVersion->getCurrentUInt());
     auto language = static_cast<Language>(ui->comboBoxLanguage->getCurrentInt());
     auto dsType = static_cast<DSType>(ui->comboBoxDSType->getCurrentInt());
@@ -237,7 +230,7 @@ void ProfileCalibrator5::search()
         }
     }
 
-    if (minSeconds > maxSeconds || minVCount > maxVCount || minTimer0 > maxTimer0 || minGxStat > maxGxStat || minVFrame > maxVFrame)
+    if (minSeconds > maxSeconds || minVCount > maxVCount || minTimer0 > maxTimer0 || minVFrame > maxVFrame)
     {
         QMessageBox msg(QMessageBox::Warning, tr("Invalid Input"), tr("Some min values are greater then max values"));
         msg.exec();
@@ -260,7 +253,7 @@ void ProfileCalibrator5::search()
                                      static_cast<u8>(ui->spinBoxMaxSpD->value()), static_cast<u8>(ui->spinBoxMaxSpe->value()) };
 
         searcher = new ProfileIVSearcher5(dt.getDate(), dt.getTime(), minSeconds, maxSeconds, minVCount, maxVCount, minTimer0, maxTimer0,
-                                          minGxStat, maxGxStat, softReset, version, language, dsType, mac, buttons, minIVs, maxIVs);
+                                           version, language, dsType, mac, buttons, minIVs, maxIVs);
     }
     else if (ui->tabWidgetType->currentIndex() == 1) // Needle Search
     {
@@ -274,18 +267,18 @@ void ProfileCalibrator5::search()
             needles.emplace_back(needleMap[item->text()]);
         }
 
-        searcher = new ProfileNeedleSearcher5(dt.getDate(), dt.getTime(), minSeconds, maxSeconds, minVCount, maxVCount, minTimer0,
-                                              maxTimer0, minGxStat, maxGxStat, softReset, version, language, dsType, mac, buttons, needles,
-                                              unovaLink, memoryLink);
+        searcher
+            = new ProfileNeedleSearcher5(dt.getDate(), dt.getTime(), minSeconds, maxSeconds, minVCount, maxVCount, minTimer0, maxTimer0,
+                                          version, language, dsType, mac, buttons, needles, unovaLink, memoryLink);
     }
     else // Seed search
     {
         u64 seed = ui->textBoxSeed->getULong();
         searcher = new ProfileSeedSearcher5(dt.getDate(), dt.getTime(), minSeconds, maxSeconds, minVCount, maxVCount, minTimer0, maxTimer0,
-                                            minGxStat, maxGxStat, softReset, version, language, dsType, mac, buttons, seed);
+                                             version, language, dsType, mac, buttons, seed);
     }
 
-    int maxProgress = (maxTimer0 - minTimer0 + 1) * (maxGxStat - minGxStat + 1) * (maxVFrame - minVFrame + 1);
+    int maxProgress = (maxTimer0 - minTimer0 + 1) * (maxVFrame - minVFrame + 1);
     searcher->setMaxProgress(maxProgress);
 
     QSettings settings;

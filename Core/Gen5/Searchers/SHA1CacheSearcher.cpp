@@ -98,10 +98,10 @@ void SHA1CacheSearcher::writeResults(const std::string &file)
         write(stream, profile.getVersion());
         write(stream, profile.getTimer0Max());
         write(stream, profile.getTimer0Min());
-        write(stream, profile.getSoftReset());
+        write(stream, (u8)0);
         write(stream, profile.getDSType());
         write(stream, profile.getLanguage());
-        write(stream, profile.getGxStat());
+        write(stream, (u8)0);
         write(stream, profile.getVCount());
         write(stream, profile.getVFrame());
 
